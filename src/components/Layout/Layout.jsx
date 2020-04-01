@@ -10,7 +10,7 @@ class Layout extends Component {
     let { children } = this.props;
     return (
       <>
-        <Header mobile={this.props.mobile} />
+        <Header />
         {children}
         <Footer />
       </>

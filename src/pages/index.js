@@ -1,8 +1,5 @@
 import React, { Component } from 'react';
 
-import MainScreen from '../components/MainScreen';
-import PromoList from '../components/PromoList';
-import PreviewList from '../components/PreviewList';
 import Layout from '../components/Layout';
 
 import Content from '../assets/db/mainScreen.js';
@@ -16,9 +13,20 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout mobile={this.state.mobile}>
-        <MainScreen content={Content} />
-        <PromoList />
-        <PreviewList mobile={this.state.mobile} />
+        <div class="flex">
+          <div class="w-25pc">
+            <h3>TEST</h3>
+          </div>
+          <div class="w-25pc">
+            <h3>TEST</h3>
+          </div>
+          <div class="w-25pc">
+            <h3>TEST</h3>
+          </div>
+          <div class="w-25pc">
+            <h3>TEST</h3>
+          </div>
+        </div>
       </Layout>
     );
   }
