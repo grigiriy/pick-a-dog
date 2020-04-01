@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 
 class DogCard extends Component {
   render() {
-    let { children } = this.props;
     return (
       <div
         className="card"
@@ -27,6 +26,7 @@ class DogCard extends Component {
           </Link>
           <div className="d-flex flex-column p-3">
             <Link
+              to="/kennel/"
               style={{
                 color: `inherit`
               }}

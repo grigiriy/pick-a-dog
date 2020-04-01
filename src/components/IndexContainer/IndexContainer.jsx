@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 
 import '../../assets/scss/styles.scss';
+import SubInfo from '../../components/SubInfo';
 import DogsList from '../../components/DogsList';
 import YMap from '../../components/YMap';
 
 class IndexContainer extends Component {
   render() {
-    let { children } = this.props;
     return (
       <>
-        {/* {children} */}
-        <div className="row">
+        <div className="row z-1">
+          <SubInfo />
+        </div>
+        <div className="row z-0">
           <div className="col-xl-6 col-lg-7 px-0">
             <DogsList />
           </div>

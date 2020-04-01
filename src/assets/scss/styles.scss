@@ -9,17 +9,20 @@ body {
 }
 
 .z-0 {
+  position: relative;
   z-index: 0;
 }
 .z-1 {
+  position: relative;
   z-index: 1;
 }
 .z-2 {
+  position: relative;
   z-index: 2;
 }
 
 header {
-  height: 40px;
+  // height: 40px;
   left: -140px;
   transition: all 0.5s;
   display: flex;
@@ -33,28 +36,43 @@ header {
     min-width: 45px;
     height: 30px;
     margin: 5px 10px;
-    margin-left: 145px;
+    margin-left: 150px;
     z-index: 2;
     cursor: pointer;
     span {
       border-radius: 7px;
       height: 7px;
-      margin: 2px;
+      margin: 3px;
       width: 100%;
-      background: #ea85bf;
+      background: #888;
       transition: all 0.2s;
+    }
+    + .logo {
+      margin-left: 15px;
+      img {
+        max-height: 50px;
+      }
     }
   }
   .topMenu {
     position: absolute;
-    width: 100px;
+    width: 140px;
     transition: all 0.8s;
     margin-top: 0;
     padding: 20px;
     z-index: 100;
-    background: #ffc7ed;
-    background: linear-gradient(120deg, #ffc7ed 0%, #a0fffd 100%);
-    height: calc(100vh - 40px);
+    background: #ccc;
+    background: linear-gradient(120deg, #fcfaf5 0%, #ccc 100%);
+    height: 100vh;
+    top: 0;
+    a {
+      color: inherit;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    li {
+      list-style: none;
+    }
   }
   &.active {
     left: 0;
@@ -72,7 +90,7 @@ header {
         height: inherit;
         transform: rotate(45deg);
         height: 6px;
-        top: 8px;
+        top: 10px;
       }
       span:last-child {
         height: inherit;

@@ -6,7 +6,12 @@ class YMap extends Component {
     let { children } = this.props;
     return (
       <YMaps>
-        <div className="position-fixed">
+        <div
+          className="position-fixed"
+          style={{
+            top: 0
+          }}
+        >
           <Map
             style={{
               minWidth: `50vw`,

@@ -33,7 +33,7 @@ class Layout extends Component {
           ]}
         />
         <Header />
-        <div className="z-0 container-fluid position-relative">{children}</div>
+        <div className="z-0 container-fluid">{children}</div>
         <Footer />
       </>
     );

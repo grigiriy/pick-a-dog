@@ -3,7 +3,6 @@ import { Link } from 'gatsby';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import Content from '../../assets/db/navMenu.js';
-import Contacts from '../../assets/db/about.js';
 
 class Header extends Component {
   state = {
@@ -17,6 +16,8 @@ class Header extends Component {
   };
 
   render() {
+    let { children } = this.props;
+    let is_open = this.state.open ? 'active' : '';
     return (
       <ReactCSSTransitionGroup
         transitionName="header"
@@ -25,9 +26,9 @@ class Header extends Component {
         transitionEnter={false}
         transitionLeave={false}
         component="header"
-        className={this.state.open ? 'active' : ''}
+        className={'shadow-lg py-3 ' + is_open}
       >
-        <ul className="topMenu">
+        <ul className="topMenu shadow-lg">
           {Content.items.map(item => (
             <li key={item.link}>
               {item.link === null ? (
@@ -48,6 +49,10 @@ class Header extends Component {
           <span></span>
           <span></span>
         </div>
+        <div className="logo">
+          <img src={require('../../images/logo.png')} alt="" />
+        </div>
+        {children}
       </ReactCSSTransitionGroup>
     );
   }

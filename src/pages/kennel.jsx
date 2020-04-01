@@ -9,10 +9,8 @@ class Kennel extends Component {
     return (
       <Layout>
         <div className="container py-5">
-          <div className="card-group flex-column">
-            <DogCard />
-            <KennelInfo />
-          </div>
+          <DogCard />
+          <KennelInfo />
         </div>
       </Layout>
     );
