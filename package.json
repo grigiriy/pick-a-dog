@@ -1,0 +1,41 @@
+{
+  "name": "pick-a-dog",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "browserslist": "^4.9.1",
+    "gatsby": "^2.19.28",
+    "gatsby-plugin-sass": "^2.1.29",
+    "node-sass": "^4.13.1",
+    "react": "^16.13.0",
+    "react-addons-css-transition-group": "^15.6.2",
+    "react-dom": "^16.13.0",
+    "react-draggable": "^4.2.0",
+    "react-helmet": "^5.2.1",
+    "react-resizable": "^1.10.1",
+    "react-scripts": "3.3.1"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
