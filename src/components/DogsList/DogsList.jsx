@@ -7,7 +7,7 @@ class DogsList extends Component {
     const Arr = [0, 1, 2, 3, 4];
     let { children } = this.props;
     return (
-      <div className="col-lg-5">
+      <div className="col-xl-6 col-lg-7">
         <div className="my-5 card-group flex-column">
           {/* {children} */}
           {Arr.map(item => (
