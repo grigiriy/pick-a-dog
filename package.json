@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.4.1",
     "browserslist": "^4.9.1",
     "gatsby": "^2.19.28",
     "gatsby-plugin-sass": "^2.1.29",
@@ -38,7 +39,5 @@
     "last 2 versions",
     "not ie <= 8"
   ],
-  "devDependencies": {
-    "shorthandcss": "^1.1.1"
-  }
+  "devDependencies": {}
 }

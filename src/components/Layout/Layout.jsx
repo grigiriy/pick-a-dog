@@ -10,9 +10,20 @@ class Layout extends Component {
     let { children } = this.props;
     return (
       <>
-        <Header />
-        {children}
-        <Footer />
+        {/* <Header /> */}
+        <div
+          className="container-fluid"
+          style={{
+            backgroundImage: `url(${require('../../images/' +
+              'back_map.jpg')})`,
+            backgroundSize: `cover`,
+            backgroundPositionX: `center`,
+            backgroundRepeat: `no-repeat`
+          }}
+        >
+          {children}
+        </div>
+        {/* <Footer /> */}
       </>
     );
   }

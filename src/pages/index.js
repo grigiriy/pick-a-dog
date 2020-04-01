@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Layout from '../components/Layout';
+import IndexContainer from '../components/IndexContainer';
 
 import Content from '../assets/db/mainScreen.js';
 
@@ -13,20 +14,7 @@ class IndexPage extends Component {
   render() {
     return (
       <Layout mobile={this.state.mobile}>
-        <div class="flex">
-          <div class="w-25pc">
-            <h3>TEST</h3>
-          </div>
-          <div class="w-25pc">
-            <h3>TEST</h3>
-          </div>
-          <div class="w-25pc">
-            <h3>TEST</h3>
-          </div>
-          <div class="w-25pc">
-            <h3>TEST</h3>
-          </div>
-        </div>
+        <IndexContainer />
       </Layout>
     );
   }
