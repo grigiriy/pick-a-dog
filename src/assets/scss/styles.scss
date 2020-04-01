@@ -2,3 +2,84 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
 @import url('../fonts/fontello/css/fontello.css');
+
+html,
+body {
+  min-height: 100vh;
+}
+
+.z-0 {
+  z-index: 0;
+}
+.z-1 {
+  z-index: 1;
+}
+.z-2 {
+  z-index: 2;
+}
+
+header {
+  height: 40px;
+  left: -140px;
+  transition: all 0.5s;
+  display: flex;
+  z-index: 100;
+  position: fixed;
+  background: #fff;
+  min-width: calc(200px + 100vw);
+  #burger {
+    display: flex;
+    flex-direction: column;
+    min-width: 45px;
+    height: 30px;
+    margin: 5px 10px;
+    margin-left: 145px;
+    z-index: 2;
+    cursor: pointer;
+    span {
+      border-radius: 7px;
+      height: 7px;
+      margin: 2px;
+      width: 100%;
+      background: #ea85bf;
+      transition: all 0.2s;
+    }
+  }
+  .topMenu {
+    position: absolute;
+    width: 100px;
+    transition: all 0.8s;
+    margin-top: 0;
+    padding: 20px;
+    z-index: 100;
+    background: #ffc7ed;
+    background: linear-gradient(120deg, #ffc7ed 0%, #a0fffd 100%);
+    height: calc(100vh - 40px);
+  }
+  &.active {
+    left: 0;
+    .topMenu {
+      overflow-y: hidden;
+      display: block;
+    }
+    #burger {
+      span {
+        height: 0;
+        position: relative;
+        margin-top: 3px;
+      }
+      span:first-child {
+        height: inherit;
+        transform: rotate(45deg);
+        height: 6px;
+        top: 8px;
+      }
+      span:last-child {
+        height: inherit;
+        height: 6px;
+        transform: rotate(-45deg);
+        top: -8px;
+      }
+    }
+  }
+}

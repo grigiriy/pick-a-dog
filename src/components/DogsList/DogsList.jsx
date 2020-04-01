@@ -4,16 +4,14 @@ import DogCard from '../../components/DogCard';
 
 class DogsList extends Component {
   render() {
-    const Arr = [0, 1, 2, 3, 4];
+    const Arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
     let { children } = this.props;
     return (
-      <div className="col-xl-6 col-lg-7">
-        <div className="my-5 card-group flex-column">
-          {/* {children} */}
-          {Arr.map(item => (
-            <DogCard />
-          ))}
-        </div>
+      <div className="my-5 card-group flex-column">
+        {/* {children} */}
+        {Arr.map(item => (
+          <DogCard />
+        ))}
       </div>
     );
   }

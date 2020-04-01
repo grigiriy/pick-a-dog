@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import './styles.scss';
-
 import Content from '../../assets/db/navMenu.js';
 import Contacts from '../../assets/db/about.js';
 
@@ -40,18 +38,16 @@ class Header extends Component {
             </li>
           ))}
         </ul>
-        {this.props.mobile && (
-          <div
-            id="burger"
-            onClick={() => {
-              this.toggleBurger(!this.state.open);
-            }}
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        )}
+        <div
+          id="burger"
+          onClick={() => {
+            this.toggleBurger(!this.state.open);
+          }}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </ReactCSSTransitionGroup>
     );
   }
