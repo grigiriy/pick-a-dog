@@ -3,24 +3,24 @@ import { Link } from 'gatsby';
 
 class DogCard extends Component {
   render() {
+    const { dog, kennel } = this.props;
     return (
       <div
         className="card"
         style={{
-          maxHeight: `240px`
+          maxHeight: `240px`,
         }}
       >
         <div className="card-body d-flex">
-          {/* {children} */}
           <Link to="/kennel/">
             <div
               style={{
-                backgroundImage: `url(${require('../../images/dog_preview.jpg')})`,
+                backgroundImage: `url(${require('../../images/' + dog.image)})`,
                 backgroundSize: `cover`,
                 backgroundPositionX: `center`,
                 backgroundRepeat: `no-repeat`,
                 minWidth: `200px`,
-                height: `200px`
+                height: `200px`,
               }}
             ></div>
           </Link>
@@ -28,24 +28,31 @@ class DogCard extends Component {
             <Link
               to="/kennel/"
               style={{
-                color: `inherit`
+                color: `inherit`,
               }}
             >
-              <p className="h3">Шанти</p>
+              <p className="h3">{dog.name}</p>
             </Link>
             <p>
-              Лабрадор, <span className="text-muted">6 лет, девочка</span>
+              {dog.main}, <span className="text-muted">{dog.secondary}</span>
             </p>
-            <p>м. Сокол, улица Космонавта Волкова 10 с 1</p>
+            <a
+              href="/kennel/"
+              type="button"
+              className="my-lg-1 mr-auto btn btn-warning"
+            >
+              Взять на прогулку{' '}
+              <span role="img" aria-label="на сайт приюта">
+                🐶
+              </span>
+            </a>
             <p
               style={{
                 textOverflow: `ellipsis`,
-                overflow: `hidden`
+                overflow: `hidden`,
               }}
             >
-              Щенок-подросток, возраст около 1 года, стерилизована. Активная
-              собачка, любит прогулки и бегать веселиться с друзьями собаками.
-              Ласковая, общительная с людьми.
+              {dog.about}
             </p>
           </div>
         </div>

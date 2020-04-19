@@ -18,7 +18,7 @@ class YMap extends Component {
               minHeight: `100vh`
             }}
             state={{
-              center: [55.75, 37.57],
+              center: [55.67411, 37.608526],
               zoom: 12
             }}
           />
