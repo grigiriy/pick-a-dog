@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import '../../assets/scss/styles.scss';
-import SubInfo from '../../components/SubInfo';
-import DogsList from '../../components/DogsList';
-import YMap from '../../components/YMap';
+import SubInfo from '../SubInfo';
+import DogsList from '../DogsList';
+import YMap from '../YMap';
 
 class IndexContainer extends Component {
   render() {

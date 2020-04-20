@@ -40,6 +40,8 @@ pids
 *.seed
 *.pid.lock
 *.zip
+*.numbers
+*.json
 
 # gatsby files
 .cache/
