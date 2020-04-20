@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
-import DogCard from '../../components/DogCard';
+import DogCard from '../DogCard';
 
 const allDogsQuery = graphql`
   query {
@@ -12,6 +12,11 @@ const allDogsQuery = graphql`
         main
         secondary
         image
+        parent {
+          ... on File {
+            name
+          }
+        }
       }
     }
   }
