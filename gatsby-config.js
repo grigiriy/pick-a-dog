@@ -1,11 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `Maria Medvedik`,
-    description: `Магазин ручной вышивки от московской художницы Марии Медведик`,
-    author: `@grigiriy`
+    title: `Pick-a-Dog - Возьми собаку для прогулок в аренду`,
+    description: `В карантин разрешено гулять с собакой. Так почему же этим не воспользоваться? На этом сайте вы найдете множество собак, которые хотят гулять.`,
+    author: `@grigiriy`,
   },
   plugins: [
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/assets/db/kennels`,
+      },
+    },
     //   `gatsby-plugin-react-helmet`,
     //   {
     //     resolve: `gatsby-source-filesystem`,
@@ -31,5 +38,5 @@ module.exports = {
     //   // this (optional) plugin enables Progressive Web App + Offline functionality
     //   // To learn more, visit: https://gatsby.dev/offline
     //   // `gatsby-plugin-offline`,
-  ]
+  ],
 };

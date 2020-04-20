@@ -1,17 +1,34 @@
 import React, { Component } from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
 import DogCard from '../../components/DogCard';
 
+const allDogsQuery = graphql`
+  query {
+    allDogsJson(sort: { fields: name, order: ASC }) {
+      nodes {
+        id
+        name
+        main
+        secondary
+        image
+      }
+    }
+  }
+`;
+
 class DogsList extends Component {
   render() {
-    const Arr = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
-    let { children } = this.props;
     return (
       <div className="my-5">
-        {/* {children} */}
-        {Arr.map(item => (
-          <DogCard />
-        ))}
+        <StaticQuery
+          query={allDogsQuery}
+          render={(data) => {
+            return data.allDogsJson.nodes.map((item) => (
+              <DogCard key={item.id} dog={item} />
+            ));
+          }}
+        />
       </div>
     );
   }

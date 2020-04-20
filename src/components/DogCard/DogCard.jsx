@@ -43,7 +43,7 @@ class DogCard extends Component {
             >
               Взять на прогулку{' '}
               <span role="img" aria-label="на сайт приюта">
-                🐶
+                🐕‍🦺
               </span>
             </a>
             <p

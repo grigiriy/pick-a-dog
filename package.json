@@ -7,18 +7,20 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.4.1",
-    "browserslist": "^4.9.1",
-    "gatsby": "^2.19.28",
-    "gatsby-plugin-sass": "^2.1.29",
+    "browserslist": "^4.11.1",
+    "gatsby": "^2.20.25",
+    "gatsby-plugin-sass": "^2.2.3",
+    "gatsby-source-filesystem": "^2.2.4",
+    "gatsby-transformer-json": "^2.3.3",
     "node-sass": "^4.13.1",
-    "react": "^16.13.0",
+    "react": "^16.13.1",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-dom": "^16.13.0",
-    "react-draggable": "^4.2.0",
+    "react-dom": "^16.13.1",
+    "react-draggable": "^4.3.1",
     "react-helmet": "^5.2.1",
     "react-resizable": "^1.10.1",
     "react-scripts": "3.3.1",
-    "react-yandex-maps": "^4.2.0"
+    "react-yandex-maps": "^4.3.0"
   },
   "keywords": [
     "gatsby"
