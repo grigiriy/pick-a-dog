@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 
 class DogCard extends Component {
   render() {
-    const { dog, kennel } = this.props;
+    const { dog } = this.props;
     return (
       <div
         className="card"
@@ -12,7 +12,7 @@ class DogCard extends Component {
         }}
       >
         <div className="card-body d-flex">
-          <Link to="/kennel/">
+          <Link to={dog.parent.name}>
             <div
               style={{
                 backgroundImage: `url(${require('../../images/' + dog.image)})`,
@@ -26,7 +26,7 @@ class DogCard extends Component {
           </Link>
           <div className="d-flex flex-column p-3">
             <Link
-              to="/kennel/"
+              to={dog.parent.name}
               style={{
                 color: `inherit`,
               }}
@@ -36,8 +36,8 @@ class DogCard extends Component {
             <p>
               {dog.main}, <span className="text-muted">{dog.secondary}</span>
             </p>
-            <a
-              href="/kennel/"
+            <Link
+              to={dog.parent.name}
               type="button"
               className="my-lg-1 mr-auto btn btn-warning"
             >
@@ -45,7 +45,7 @@ class DogCard extends Component {
               <span role="img" aria-label="на сайт приюта">
                 🐕‍🦺
               </span>
-            </a>
+            </Link>
             <p
               style={{
                 textOverflow: `ellipsis`,
