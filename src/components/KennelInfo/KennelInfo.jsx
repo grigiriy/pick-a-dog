@@ -6,7 +6,7 @@ class KennelInfo extends Component {
     const { kennel } = this.props;
     return (
       <>
-        <div className="p-md-5 p-sm-3 bg-light">
+        <div className="bg-light p-md-5 p-3">
           <div className="row">
             <div className="col-lg-8">
               <p className="h3">{kennel.name}</p>
@@ -48,7 +48,7 @@ class KennelInfo extends Component {
             </div>
           </div>
         </div>
-        <div className="p-md-5 p-sm-3">
+        <div className="p-md-5 p-3">
           <p>{kennel.about}</p>
           <img
             className="w-100 d-block mt-3 mx-auto"

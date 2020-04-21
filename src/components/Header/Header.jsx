@@ -14,7 +14,7 @@ class Header extends Component {
   };
 
   render() {
-    let {content} = this.props;
+    let { content } = this.props;
     let is_open = this.state.open ? 'active' : '';
     return (
       <ReactCSSTransitionGroup
@@ -24,7 +24,7 @@ class Header extends Component {
         transitionEnter={false}
         transitionLeave={false}
         component="header"
-        className={'py-3 ' + is_open}
+        className={'border-bottom pt-3 pb-1 ' + is_open}
       >
         <div className="topMenu d-flex flex-column p-5 bg-dark text-light">
           <ul className="pl-0 mb-5">
@@ -45,8 +45,12 @@ class Header extends Component {
             </span>{' '}
             Поддержать pick-a-dog
           </Link>
-          <p className="mt-3 text-center">{content.credintails} <Link
-              to={content.link}>{content.author}</Link></p>
+          <p className="mt-3 text-center">
+            {content.credintails}{' '}
+            <a target="_blank" className="text-warning" href={content.link}>
+              {content.author}
+            </a>
+          </p>
         </div>
         <div
           id="burger"

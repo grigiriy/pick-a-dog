@@ -5,15 +5,15 @@ class DogInfo extends Component {
   render() {
     const { dog } = this.props;
     return (
-      <div className="p-md-5 p-sm-3">
+      <div className="p-md-5 p-3">
         <div className="row">
           <img
-            className="w-100 d-block mt-3 mx-auto col-md-5"
+            className="w-100 d-block mx-auto col-md-5"
             src={require('../../images/' + dog.image)}
             alt=""
           />
-          <div className="d-flex flex-column p-3 col-md-7">
-            <p className="h3">{dog.name}</p>
+          <div className="d-flex flex-column col-md-7">
+            <p className="h3 pt-3 pt-md-0">{dog.name}</p>
             <p>
               {dog.main}, <span className="text-muted">{dog.secondary}</span>
             </p>
