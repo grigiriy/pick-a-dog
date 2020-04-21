@@ -102,3 +102,15 @@ header {
   font-size: 0.5em;
   opacity: 0.7;
 }
+
+.active_map {
+  .list_block {
+    display: none;
+  }
+}
+
+.active_list {
+  .map_block {
+    display: none;
+  }
+}

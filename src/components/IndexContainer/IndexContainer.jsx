@@ -5,18 +5,35 @@ import SubInfo from '../SubInfo';
 import DogsList from '../DogsList';
 import YMap from '../YMap';
 
+const cw = window.innerWidth;
 class IndexContainer extends Component {
+  state = {
+    map: false,
+    mobile: cw < 992 ? true : false,
+  };
+
+  toggleTab = (e) => {
+    this.setState({ map: !this.state.map });
+  };
+
   render() {
+    let active_tab =
+      this.state.mobile && this.state.map
+        ? 'active_map'
+        : this.state.mobile && !this.state.map
+        ? 'active_list'
+        : '';
+
     return (
       <>
         <div className="row z-1">
-          <SubInfo />
+          <SubInfo toggleTab={this.toggleTab} active_tab={active_tab} />
         </div>
-        <div className="row z-0">
-          <div className="col-xl-6 col-lg-7 px-0">
+        <div className={'row z-0 ' + active_tab}>
+          <div className="col-xl-6 col-lg-7 px-0 list_block">
             <DogsList />
           </div>
-          <div className="col-xl-6 col-lg-5 px-0">
+          <div className="col-xl-6 col-lg-5 px-0 map_block">
             <YMap />
           </div>
         </div>
