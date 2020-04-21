@@ -12,12 +12,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           main
           secondary
           image
-          parent {
-            ... on File {
-              name
-              relativeDirectory
-            }
-          }
         }
       }
     }
