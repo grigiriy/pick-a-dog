@@ -25,16 +25,14 @@ const allDogsQuery = graphql`
 class DogsList extends Component {
   render() {
     return (
-      <div className="my-5">
-        <StaticQuery
-          query={allDogsQuery}
-          render={(data) => {
-            return data.allDogsJson.nodes.map((item) => (
-              <DogCard key={item.id} dog={item} />
-            ));
-          }}
-        />
-      </div>
+      <StaticQuery
+        query={allDogsQuery}
+        render={(data) => {
+          return data.allDogsJson.nodes.map((item) => (
+            <DogCard key={item.id} dog={item} />
+          ));
+        }}
+      />
     );
   }
 }

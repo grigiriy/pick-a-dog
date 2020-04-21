@@ -1,10 +1,26 @@
 import React, { Component } from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
 import Footer from '../Footer';
 import Header from '../Header';
 import Helmet from 'react-helmet';
 
 import '../../assets/scss/styles.scss';
+
+const navQuery = graphql`
+  query {
+    kennelsJson {
+      items {
+        name
+        link
+      }
+      author
+      credintails
+      text
+      link
+    }
+  }
+`;
 
 class Layout extends Component {
   render() {
@@ -32,7 +48,12 @@ class Layout extends Component {
             },
           ]}
         />
-        <Header />
+        <StaticQuery
+          query={navQuery}
+          render={(data) => {
+            return <Header content={data.kennelsJson} />;
+          }}
+        />
         <div className="z-0 container-fluid">{children}</div>
         <Footer />
       </>

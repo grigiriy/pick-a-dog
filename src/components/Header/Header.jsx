@@ -2,21 +2,19 @@ import React, { Component } from 'react';
 import { Link } from 'gatsby';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
-import Content from '../../assets/db/navMenu.js';
-
 class Header extends Component {
   state = {
-    open: false
+    open: false,
   };
 
-  toggleBurger = e => {
+  toggleBurger = (e) => {
     this.setState({
-      open: e
+      open: e,
     });
   };
 
   render() {
-    let { children } = this.props;
+    let {content} = this.props;
     let is_open = this.state.open ? 'active' : '';
     return (
       <ReactCSSTransitionGroup
@@ -26,19 +24,30 @@ class Header extends Component {
         transitionEnter={false}
         transitionLeave={false}
         component="header"
-        className={'shadow-lg py-3 ' + is_open}
+        className={'py-3 ' + is_open}
       >
-        <ul className="topMenu shadow-lg">
-          {Content.items.map(item => (
-            <li key={item.link}>
-              {item.link === null ? (
-                <hr />
-              ) : (
+        <div className="topMenu d-flex flex-column p-5 bg-dark text-light">
+          <ul className="pl-0 mb-5">
+            {content.items.map((item) => (
+              <li className="py-1" key={item.link}>
                 <Link to={`/${item.link}`}>{item.name}</Link>
-              )}
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+          <p>{content.text}</p>
+          <Link
+            to="/test/"
+            type="button"
+            className="mt-auto mx-lg-0 mx-1 btn btn-warning"
+          >
+            <span role="img" aria-label="поддержать pick-a-dog">
+              🍫
+            </span>{' '}
+            Поддержать pick-a-dog
+          </Link>
+          <p className="mt-3 text-center">{content.credintails} <Link
+              to={content.link}>{content.author}</Link></p>
+        </div>
         <div
           id="burger"
           onClick={() => {
@@ -50,9 +59,10 @@ class Header extends Component {
           <span></span>
         </div>
         <div className="logo">
-          <img src={require('../../images/logo.png')} alt="" />
+          <Link to="/">
+            <img src={require('../../images/logo.png')} alt="" />
+          </Link>
         </div>
-        {children}
       </ReactCSSTransitionGroup>
     );
   }
