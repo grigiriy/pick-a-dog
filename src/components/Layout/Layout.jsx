@@ -14,6 +14,7 @@ const navQuery = graphql`
         name
         link
       }
+      name
       author
       credintails
       text
