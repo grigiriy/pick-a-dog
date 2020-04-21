@@ -5,51 +5,53 @@ class KennelInfo extends Component {
   render() {
     const { kennel } = this.props;
     return (
-      <div className="card">
-        <div className="card-header d-flex">
-          <div className="col-lg-8">
-            <p className="h3">{kennel.name}</p>
-            <p>{kennel.additional}</p>
-          </div>
-          <div className="col-lg-4">
-            <a
-              href={kennel.url}
-              type="button"
-              target="_blank"
-              className="my-1 mx-lg-0 mx-1 btn btn-warning"
-            >
-              <span role="img" aria-label="на сайт приюта">
-                🐶
-              </span>{' '}
-              На сайт приюта
-            </a>
-            <a
-              href={kennel.donate}
-              target="_blank"
-              type="button"
-              className="my-1 mx-lg-0 mx-1 btn btn-warning"
-            >
-              <span role="img" aria-label="помочь приюту">
-                💸
-              </span>{' '}
-              Помочь приюту
-            </a>
-            <Link
-              to="/test/"
-              type="button"
-              className="my-1 mx-lg-0 mx-1 btn btn-warning"
-            >
-              <span role="img" aria-label="поддержать pick-a-dog">
-                🍫
-              </span>{' '}
-              Поддержать pick-a-dog
-            </Link>
+      <>
+        <div className="p-md-5 p-sm-3 bg-light">
+          <div className="row">
+            <div className="col-lg-8">
+              <p className="h3">{kennel.name}</p>
+              <p>{kennel.additional}</p>
+            </div>
+            <div className="col-lg-4">
+              <a
+                href={kennel.url}
+                type="button"
+                target="_blank"
+                className="my-1 mx-lg-0 mx-1 btn btn-warning"
+              >
+                <span role="img" aria-label="на сайт приюта">
+                  🐶
+                </span>{' '}
+                На сайт приюта
+              </a>
+              <a
+                href={kennel.donate}
+                target="_blank"
+                type="button"
+                className="my-1 mx-lg-0 mx-1 btn btn-warning"
+              >
+                <span role="img" aria-label="помочь приюту">
+                  💸
+                </span>{' '}
+                Помочь приюту
+              </a>
+              <Link
+                to="/test/"
+                type="button"
+                className="my-1 mx-lg-0 mx-1 btn btn-warning"
+              >
+                <span role="img" aria-label="поддержать pick-a-dog">
+                  🍫
+                </span>{' '}
+                Поддержать pick-a-dog
+              </Link>
+            </div>
           </div>
         </div>
-        <div className="card-body">
+        <div className="p-md-5 p-sm-3">
           <p>{kennel.about}</p>
           <img
-            className="w-75 d-block mt-3 mx-auto"
+            className="w-100 d-block mt-3 mx-auto"
             src={require('../../images/' + kennel.image)}
             alt=""
           />
@@ -65,7 +67,7 @@ class KennelInfo extends Component {
           </p>
           <p>{kennel.additional}</p>
         </div>
-        <div className="card-footer py-5">
+        <div className="bg-light py-5 text-center">
           <div className="d-sm-flex col-lg-8 mx-auto justify-content-center">
             <a
               href="/test/"
@@ -99,7 +101,7 @@ class KennelInfo extends Component {
             </a>
           </div>
         </div>
-      </div>
+      </>
     );
   }
 }

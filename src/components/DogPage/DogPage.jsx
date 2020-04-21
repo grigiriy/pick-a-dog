@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 
 import Layout from '../Layout';
-import DogCard from '../DogCard';
+import DogInfo from '../DogInfo';
 import KennelInfo from '../KennelInfo';
 
 const KennelsQuery = graphql`
@@ -28,19 +28,21 @@ class DogPage extends Component {
     return (
       <Layout>
         <div className="container py-5">
-          <DogCard dog={this.props.pageContext.dog} />
-          <StaticQuery
-            query={KennelsQuery}
-            render={(data) => {
-              return data.allAboutJson.nodes.map(
-                (item) =>
-                  this.props.pageContext.dog.image.split('-', 1)[0] ===
-                    item.image.split('.', 1)[0] && (
-                    <KennelInfo key={item.id} kennel={item} />
-                  )
-              );
-            }}
-          />
+          <div className="card">
+            <DogInfo dog={this.props.pageContext.dog} />
+            <StaticQuery
+              query={KennelsQuery}
+              render={(data) => {
+                return data.allAboutJson.nodes.map(
+                  (item) =>
+                    this.props.pageContext.dog.image.split('-', 1)[0] ===
+                      item.image.split('.', 1)[0] && (
+                      <KennelInfo key={item.id} kennel={item} />
+                    )
+                );
+              }}
+            />
+          </div>
         </div>
       </Layout>
     );

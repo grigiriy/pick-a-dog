@@ -10,6 +10,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           id
           name
           main
+          about
+          geo
           secondary
           image
           parent {

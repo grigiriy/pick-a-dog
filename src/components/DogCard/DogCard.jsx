@@ -46,14 +46,6 @@ class DogCard extends Component {
                 🐕‍🦺
               </span>
             </Link>
-            <p
-              style={{
-                textOverflow: `ellipsis`,
-                overflow: `hidden`,
-              }}
-            >
-              {dog.about}
-            </p>
           </div>
         </div>
       </div>
