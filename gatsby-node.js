@@ -12,6 +12,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           main
           about
           geo
+          link
           secondary
           image
           parent {
@@ -25,7 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   `);
 
   if (result.errors) {
-    reporter.panicOnBuild('🚨  ERROR: Loading "createPages" query');
+    reporter.panicOnBuild('🚨 ERROR: Loading "createPages" query');
   }
 
   const dogs = result.data.allDogsJson.nodes;

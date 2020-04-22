@@ -6,6 +6,7 @@
 html,
 body {
   min-height: 100vh;
+  background: #f8f9fa;
 }
 
 .z-0 {
@@ -101,6 +102,17 @@ header {
 .smaller {
   font-size: 0.5em;
   opacity: 0.7;
+}
+
+.dogImage {
+  background-size: cover;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  min-width: 200px;
+  height: 200px;
+  @media (max-width: 576px) {
+    height: 300px;
+  }
 }
 
 .active_map {

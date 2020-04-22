@@ -26,7 +26,7 @@ class YMap extends Component {
     return (
       <YMaps>
         <div
-          className="position-fixed"
+          className={!this.props.mobile ? 'position-fixed' : ''}
           style={{
             top: 0,
           }}
@@ -41,29 +41,27 @@ class YMap extends Component {
               zoom: 12,
             }}
           >
-          <StaticQuery
-            query={allDogsQuery}
-            render={(data) => {
-              return data.allDogsJson.nodes.map((item) => (
-                <Placemark key={item.id}
-                geometry={item.geo}
-
-                properties={{
-                  hintContent: 'Собственный значок метки',
-                  balloonContent: 'ХУЙ'
-                }}
-
-                options={{
-                  iconLayout: 'default#image',
-                  iconImageHref: dogface,
-                  iconImageSize: [50, 50],
-                  iconImageOffset: [-3, -42],
-                }}
-
-                />
-              ));
-            }}
-          />
+            <StaticQuery
+              query={allDogsQuery}
+              render={(data) => {
+                return data.allDogsJson.nodes.map((item) => (
+                  <Placemark
+                    key={item.id}
+                    geometry={item.geo}
+                    properties={{
+                      hintContent: 'Собственный значок метки',
+                      balloonContent: 'ТЕСТ',
+                    }}
+                    options={{
+                      iconLayout: 'default#image',
+                      iconImageHref: dogface,
+                      iconImageSize: [50, 50],
+                      iconImageOffset: [-3, -42],
+                    }}
+                  />
+                ));
+              }}
+            />
           </Map>
           {children}
         </div>
@@ -72,4 +70,3 @@ class YMap extends Component {
   }
 }
 export default YMap;
-

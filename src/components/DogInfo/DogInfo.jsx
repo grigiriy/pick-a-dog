@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 
 class DogInfo extends Component {
   render() {
@@ -18,8 +17,9 @@ class DogInfo extends Component {
               {dog.main}, <span className="text-muted">{dog.secondary}</span>
             </p>
             {dog.about && <p>{dog.about}</p>}
-            <Link
-              to={dog.parent.name}
+            <a
+              href={dog.link}
+              target="_blank"
               type="button"
               className="my-lg-1 mr-auto btn btn-warning"
             >
@@ -27,7 +27,7 @@ class DogInfo extends Component {
               <span role="img" aria-label="на сайт приюта">
                 🐕‍🦺
               </span>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

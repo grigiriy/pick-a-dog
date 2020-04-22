@@ -55,7 +55,7 @@ class Layout extends Component {
             return <Header content={data.kennelsJson} />;
           }}
         />
-        <div className="z-0 container-fluid bg-light pt-3">{children}</div>
+        <div className="z-0 container pt-3">{children}</div>
         <StaticQuery
           query={navQuery}
           render={(data) => {

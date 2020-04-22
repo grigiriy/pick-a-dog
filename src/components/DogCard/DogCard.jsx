@@ -5,22 +5,13 @@ class DogCard extends Component {
   render() {
     const { dog } = this.props;
     return (
-      <div
-        className="card"
-        style={{
-          maxHeight: `240px`,
-        }}
-      >
-        <div className="card-body d-flex">
+      <div className="card">
+        <div className="card-body d-sm-flex">
           <Link to={dog.parent.name}>
             <div
+              className="dogImage"
               style={{
                 backgroundImage: `url(${require('../../images/' + dog.image)})`,
-                backgroundSize: `cover`,
-                backgroundPositionX: `center`,
-                backgroundRepeat: `no-repeat`,
-                minWidth: `200px`,
-                height: `200px`,
               }}
             ></div>
           </Link>

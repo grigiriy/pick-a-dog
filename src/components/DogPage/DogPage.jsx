@@ -27,7 +27,7 @@ class DogPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="container py-5">
+        <div className="py-5">
           <div className="card mt-5">
             <DogInfo dog={this.props.pageContext.dog} />
             <StaticQuery
