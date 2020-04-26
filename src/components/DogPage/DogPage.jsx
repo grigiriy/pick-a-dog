@@ -20,6 +20,9 @@ const KennelsQuery = graphql`
         about
       }
     }
+    kennelsJson {
+      donate
+    }
   }
 `;
 
@@ -27,7 +30,7 @@ class DogPage extends Component {
   render() {
     return (
       <Layout>
-        <div className="py-5">
+        <div className="py-5 container">
           <div className="card mt-5">
             <DogInfo dog={this.props.pageContext.dog} />
             <StaticQuery
@@ -37,7 +40,11 @@ class DogPage extends Component {
                   (item) =>
                     this.props.pageContext.dog.image.split('-', 1)[0] ===
                       item.image.split('.', 1)[0] && (
-                      <KennelInfo key={item.id} kennel={item} />
+                      <KennelInfo
+                        key={item.id}
+                        kennel={item}
+                        donate={data.kennelsJson.donate}
+                      />
                     )
                 );
               }}

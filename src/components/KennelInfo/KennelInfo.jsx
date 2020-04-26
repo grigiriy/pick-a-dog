@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'gatsby';
 
 class KennelInfo extends Component {
   render() {
@@ -35,8 +34,10 @@ class KennelInfo extends Component {
                 </span>{' '}
                 Помочь приюту
               </a>
-              <Link
-                to="/test/"
+              <a
+                href={this.props.donate}
+                target="_blank"
+                rel="noopener noreferrer"
                 type="button"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
@@ -44,7 +45,7 @@ class KennelInfo extends Component {
                   🍫
                 </span>{' '}
                 Поддержать pick&#8209;a&#8209;dog
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -70,7 +71,7 @@ class KennelInfo extends Component {
         <div className="bg-light py-5 text-center">
           <div className="d-sm-flex col-lg-8 mx-auto justify-content-center">
             <a
-              href="/test/"
+              href={kennel.url}
               type="button"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
@@ -80,7 +81,7 @@ class KennelInfo extends Component {
               На сайт приюта
             </a>
             <a
-              href="/test/"
+              href={kennel.donate}
               type="button"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
@@ -90,7 +91,9 @@ class KennelInfo extends Component {
               Помочь приюту
             </a>
             <a
-              href="/test/"
+              href={this.props.donate}
+              target="_blank"
+              rel="noopener noreferrer"
               type="button"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >

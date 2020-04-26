@@ -35,8 +35,10 @@ class Header extends Component {
             ))}
           </ul>
           <p>{content.text}</p>
-          <Link
-            to="/test/"
+          <a
+            href={content.donate}
+            target="_blank"
+            rel="noopener noreferrer"
             type="button"
             className="mt-auto mx-lg-0 mx-1 btn btn-warning"
           >
@@ -44,7 +46,7 @@ class Header extends Component {
               🍫
             </span>{' '}
             Поддержать pick&#8209;a&#8209;dog
-          </Link>
+          </a>
           <p className="mt-3 text-center">
             {content.credintails}{' '}
             <a target="_blank" className="text-warning" href={content.link}>

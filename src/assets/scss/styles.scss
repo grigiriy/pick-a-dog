@@ -148,3 +148,9 @@ header {
   max-width: 600px;
   width: 100%;
 }
+
+h1.adaptive_headline {
+  @media (max-width: 455px) {
+    font-size: 1.5em;
+  }
+}

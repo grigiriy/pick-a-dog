@@ -17,6 +17,7 @@ const navQuery = graphql`
       name
       author
       credintails
+      donate
       text
       link
     }
@@ -34,7 +35,7 @@ class Layout extends Component {
             {
               name: 'description',
               content:
-                'В условиях карантина важен каждый миг проведенный вне дома. Мы запустили специальный маркетплейс для сдачи собак в аренду специально к 1 апреля.',
+                'В условиях карантина важен каждый миг проведенный вне дома. Найдите себе нового друга, чтобы скоротать это непростое время.',
             },
             {
               name: 'keywords',
@@ -56,7 +57,7 @@ class Layout extends Component {
             return (
               <>
                 <Header content={data.kennelsJson} />
-                <div className="z-0 container pt-3">{children}</div>
+                <div className="z-0 container-fluid pt-3">{children}</div>
                 <Footer content={data.kennelsJson} />
               </>
             );

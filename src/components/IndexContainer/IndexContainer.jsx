@@ -11,7 +11,6 @@ class IndexContainer extends Component {
   state = {
     map: false,
     mobile: cw < 992 ? true : false,
-    // mobile: cw,
   };
 
   toggleTab = (e) => {
@@ -31,7 +30,7 @@ class IndexContainer extends Component {
         <div className="row z-1">
           <SubInfo toggleTab={this.toggleTab} active_tab={active_tab} />
         </div>
-        <div className={'row z-0 ' + active_tab}>
+        <div className={'row z-0 container mx-auto ' + active_tab}>
           <div className="col-xl-6 col-lg-7 px-0 list_block">
             <DogsList />
           </div>
