@@ -19,12 +19,8 @@ class IndexPage extends Component {
               которого, люди, у которых пока нет собаки, получили бы возможность
               легально выходить на прогулки.
             </p>
-            <span
-              role="img"
-              aria-label=""
-              className="text-center d-block my-3 mx-n5"
-            >
-              🐩 🐕 🐕‍🦺 🐩 🐕 🐕‍🦺 🐩 🐕 🐕‍🦺 🐩 🐕 🐕‍🦺 🐩 🐕 🐕‍🦺
+            <span role="img" aria-label="" className="text-center d-block my-3">
+              🐩 🐕 🐕‍🦺 🦮 🐩 🐕 🐕‍🦺 🦮 🐩 🐕 🐕‍🦺 🦮
             </span>
             <p className="mb-5">
               В москве и области находится большое количество приютов и
