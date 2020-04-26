@@ -43,7 +43,7 @@ class KennelInfo extends Component {
                 <span role="img" aria-label="поддержать pick-a-dog">
                   🍫
                 </span>{' '}
-                Поддержать pick-a-dog
+                Поддержать pick&#8209;a&#8209;dog
               </Link>
             </div>
           </div>
@@ -97,7 +97,7 @@ class KennelInfo extends Component {
               <span role="img" aria-label="поддержать pick-a-dog">
                 🍫
               </span>{' '}
-              Поддержать pick-a-dog
+              Поддержать pick&#8209;a&#8209;dog
             </a>
           </div>
         </div>

@@ -16,6 +16,11 @@ body {
   min-height: 100vh;
   background: #f8f9fa;
 }
+#___gatsby > div {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .z-0 {
   position: relative;
@@ -28,6 +33,10 @@ body {
 .z-2 {
   position: relative;
   z-index: 2;
+}
+
+.footer {
+  margin-top: auto;
 }
 
 header {
@@ -137,4 +146,5 @@ header {
 
 .mw-custom {
   max-width: 600px;
+  width: 100%;
 }

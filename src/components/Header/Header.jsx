@@ -43,7 +43,7 @@ class Header extends Component {
             <span role="img" aria-label="поддержать pick-a-dog">
               🍫
             </span>{' '}
-            Поддержать pick-a-dog
+            Поддержать pick&#8209;a&#8209;dog
           </Link>
           <p className="mt-3 text-center">
             {content.credintails}{' '}
