@@ -5,11 +5,13 @@ import SubInfo from '../SubInfo';
 import DogsList from '../DogsList';
 import YMap from '../YMap';
 
-const cw = window.innerWidth;
+const cw =
+  typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
 class IndexContainer extends Component {
   state = {
     map: false,
     mobile: cw < 992 ? true : false,
+    // mobile: cw,
   };
 
   toggleTab = (e) => {
