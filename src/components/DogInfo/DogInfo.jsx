@@ -7,7 +7,7 @@ class DogInfo extends Component {
       <div className="p-md-5 p-3">
         <div className="row">
           <img
-            className="w-100 d-block mx-auto col-md-5"
+            className="w-100 h-100 d-block mx-auto col-md-5"
             src={require('../../images/' + dog.image)}
             alt=""
           />

@@ -3,6 +3,14 @@
 
 @import url('../fonts/fontello/css/fontello.css');
 
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: none;
+}
+//////
+
 html,
 body {
   min-height: 100vh;
@@ -125,4 +133,8 @@ header {
   .map_block {
     display: none;
   }
+}
+
+.mw-custom {
+  max-width: 600px;
 }

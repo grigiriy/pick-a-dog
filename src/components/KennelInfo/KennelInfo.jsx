@@ -51,7 +51,7 @@ class KennelInfo extends Component {
         <div className="p-md-5 p-3">
           <p>{kennel.about}</p>
           <img
-            className="w-100 d-block mt-3 mx-auto"
+            className="mw-custom d-block mt-3 mx-auto"
             src={require('../../images/' + kennel.image)}
             alt=""
           />

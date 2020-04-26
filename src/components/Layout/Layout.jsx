@@ -49,17 +49,17 @@ class Layout extends Component {
             },
           ]}
         />
+        {/* <div className="z-0 container pt-3">{children}</div> */}
         <StaticQuery
           query={navQuery}
           render={(data) => {
-            return <Header content={data.kennelsJson} />;
-          }}
-        />
-        <div className="z-0 container pt-3">{children}</div>
-        <StaticQuery
-          query={navQuery}
-          render={(data) => {
-            return <Footer content={data.kennelsJson} />;
+            return (
+              <>
+                <Header content={data.kennelsJson} />
+                <div className="z-0 container pt-3">{children}</div>
+                <Footer content={data.kennelsJson} />
+              </>
+            );
           }}
         />
       </>
