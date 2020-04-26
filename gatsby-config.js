@@ -13,6 +13,24 @@ module.exports = {
         path: `${__dirname}/src/assets/db/kennels`,
       },
     },
+    {
+      resolve: `gatsby-plugin-yandex-metrika`,
+      options: {
+        trackingId: '62302222',
+        webvisor: true,
+        trackHash: true,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-164581842-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        defer: false,
+      },
+    },
     //   `gatsby-plugin-react-helmet`,
     //   {
     //     resolve: `gatsby-source-filesystem`,
