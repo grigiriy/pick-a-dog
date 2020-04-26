@@ -48,6 +48,9 @@ header {
   position: fixed;
   background: #fff;
   min-width: calc(350px + 100vw);
+  @media (max-width: 455px) {
+    left: -260px;
+  }
   #burger {
     display: flex;
     flex-direction: column;
@@ -56,6 +59,9 @@ header {
     margin: 5px 10px;
     margin-left: 320px;
     z-index: 2;
+    @media (max-width: 455px) {
+      margin-left: 270px;
+    }
     cursor: pointer;
     span {
       border-radius: 7px;
@@ -77,10 +83,14 @@ header {
     width: 300px;
     transition: all 0.8s;
     margin-top: 0;
-    padding: 20px;
+    padding: 50px;
     z-index: 100;
     height: 100vh;
     top: 0;
+    @media (max-width: 455px) {
+      width: 260px;
+      padding: 20px;
+    }
     li {
       list-style: none;
       a {
@@ -153,4 +163,8 @@ h1.adaptive_headline {
   @media (max-width: 455px) {
     font-size: 1.5em;
   }
+}
+
+.mx-ncustom {
+  margin-left: -2em;
 }

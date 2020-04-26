@@ -34,7 +34,7 @@ class IndexContainer extends Component {
           <div className="col-xl-6 col-lg-7 px-0 list_block">
             <DogsList />
           </div>
-          <div className="col-xl-6 col-lg-5 px-0 map_block">
+          <div className="col-xl-6 col-lg-5 px-0 mx-lg-auto mx-ncustom map_block">
             <YMap mobile={this.state.mobile} />
           </div>
         </div>

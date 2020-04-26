@@ -16,6 +16,7 @@ class Header extends Component {
   render() {
     let { content } = this.props;
     let is_open = this.state.open ? 'active' : '';
+
     return (
       <ReactCSSTransitionGroup
         transitionName="header"
@@ -26,7 +27,7 @@ class Header extends Component {
         component="header"
         className={'border-bottom pt-3 pb-1 ' + is_open}
       >
-        <div className="topMenu d-flex flex-column p-5 bg-dark text-light">
+        <div className="topMenu d-flex flex-column bg-dark text-light">
           <ul className="pl-0 mb-5">
             {content.items.map((item) => (
               <li className="py-1" key={item.link}>

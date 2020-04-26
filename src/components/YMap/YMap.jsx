@@ -25,6 +25,7 @@ const allDogsQuery = graphql`
 `;
 class YMap extends Component {
   render() {
+    let maxWidth = this.props.mobile ? '100vw' : '50vw';
     let { children } = this.props;
     return (
       <YMaps>
@@ -32,6 +33,7 @@ class YMap extends Component {
           className={!this.props.mobile ? 'position-fixed' : ''}
           style={{
             top: 0,
+            width: maxWidth,
           }}
         >
           <Map
@@ -40,8 +42,8 @@ class YMap extends Component {
               minHeight: `100vh`,
             }}
             state={{
-              center: [55.67411, 37.608526],
-              zoom: 12,
+              center: [55.769711, 37.636707],
+              zoom: 11,
             }}
           >
             <StaticQuery
