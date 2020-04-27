@@ -1,9 +1,4 @@
 module.exports = {
-  siteMetadata: {
-    title: `Pick-a-Dog - Возьми собаку для прогулок в аренду`,
-    description: `В карантин разрешено гулять с собакой. Так почему же этим не воспользоваться? На этом сайте вы найдете множество собак, которые хотят гулять.`,
-    author: `@grigiriy`,
-  },
   plugins: [
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,

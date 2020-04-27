@@ -42,6 +42,7 @@ class Header extends Component {
             rel="noopener noreferrer"
             type="button"
             className="mt-auto mx-lg-0 mx-1 btn btn-warning"
+            onClick="ym(62302222,'reachGoal','donate_me')"
           >
             <span role="img" aria-label="поддержать pick-a-dog">
               🍫

@@ -16,6 +16,7 @@ class KennelInfo extends Component {
                 href={kennel.url}
                 type="button"
                 target="_blank"
+                onClick="ym(62302222,'reachGoal','site_center')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="на сайт приюта">
@@ -27,6 +28,7 @@ class KennelInfo extends Component {
                 href={kennel.donate}
                 target="_blank"
                 type="button"
+                onClick="ym(62302222,'reachGoal','donate_center')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="помочь приюту">
@@ -39,6 +41,7 @@ class KennelInfo extends Component {
                 target="_blank"
                 rel="noopener noreferrer"
                 type="button"
+                onClick="ym(62302222,'reachGoal','donate_me')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="поддержать pick-a-dog">
@@ -73,6 +76,8 @@ class KennelInfo extends Component {
             <a
               href={kennel.url}
               type="button"
+              target="_blank"
+              onClick="ym(62302222,'reachGoal','site_center')"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
               <span role="img" aria-label="на сайт приюта">
@@ -83,7 +88,9 @@ class KennelInfo extends Component {
             <a
               href={kennel.donate}
               type="button"
+              target="_blank"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
+              onClick="ym(62302222,'reachGoal','donate_center')"
             >
               <span role="img" aria-label="помочь приюту">
                 💸
@@ -95,6 +102,7 @@ class KennelInfo extends Component {
               target="_blank"
               rel="noopener noreferrer"
               type="button"
+              onClick="ym(62302222,'reachGoal','donate_me')"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
               <span role="img" aria-label="поддержать pick-a-dog">

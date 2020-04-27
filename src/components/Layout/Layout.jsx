@@ -30,16 +30,30 @@ class Layout extends Component {
     return (
       <>
         <Helmet
-          title="Pick-a-dog - Возьми собаку в аренду"
+          title="Pick-a-dog - Возьми собаку для прогулок во время самоизоляции"
           meta={[
             {
               name: 'description',
               content:
-                'В условиях карантина важен каждый миг проведенный вне дома. Найдите себе нового друга, чтобы скоротать это непростое время.',
+                'В условиях самоизоляции важен каждый миг проведенный вне дома. Найдите себе нового друга, чтобы скоротать это непростое время.',
             },
             {
               name: 'keywords',
               content: 'карантин, самоизоляция, собаки, собака в аренду',
+            },
+            {
+              name: 'og:title',
+              content:
+                'Pick-a-dog - Возьми собаку для прогулок во время самоизоляции',
+            },
+            {
+              name: 'og:description',
+              content:
+                'В условиях самоизоляции важен каждый миг проведенный вне дома. Найдите себе нового друга, чтобы скоротать это непростое время.',
+            },
+            {
+              name: 'og:image',
+              content: `${require('../../images/favicon.png')}`,
             },
           ]}
           link={[
@@ -50,7 +64,6 @@ class Layout extends Component {
             },
           ]}
         />
-        {/* <div className="z-0 container pt-3">{children}</div> */}
         <StaticQuery
           query={navQuery}
           render={(data) => {

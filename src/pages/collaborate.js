@@ -50,14 +50,23 @@ class IndexPage extends Component {
                 <span role="img" aria-label="">
                   📱
                 </span>{' '}
-                Telegram <a href="https://t.me/gmalyshev">@gmalyshev</a>
+                Telegram{' '}
+                <a
+                  href="https://t.me/gmalyshev"
+                  onClick="ym(62302222,'reachGoal','connect_me')"
+                >
+                  @gmalyshev
+                </a>
               </p>
               <p>
                 <span role="img" aria-label="">
                   📧
                 </span>{' '}
                 e-mail{' '}
-                <a href="mailto:grigiriy.malyshev@gmail.com">
+                <a
+                  href="mailto:grigiriy.malyshev@gmail.com"
+                  onClick="ym(62302222,'reachGoal','connect_me')"
+                >
                   grigiriy.malyshev@gmail.com
                 </a>
               </p>
@@ -71,6 +80,7 @@ class IndexPage extends Component {
                         target="_blank"
                         rel="noopener noreferrer"
                         type="button"
+                        onClick="ym(62302222,'reachGoal','donate_me')"
                         className="mt-auto mx-lg-0 btn btn-warning"
                       >
                         <span role="img" aria-label="поддержать pick-a-dog">

@@ -21,6 +21,7 @@ class DogInfo extends Component {
               href={dog.link}
               target="_blank"
               type="button"
+              onClick="ym(62302222,'reachGoal','site_dog')"
               className="my-lg-1 mr-auto btn btn-warning"
             >
               Взять на прогулку{' '}
