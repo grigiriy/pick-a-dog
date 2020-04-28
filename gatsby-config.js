@@ -1,5 +1,9 @@
 module.exports = {
+  siteMetadata: {
+    title: `Pick-a-Dog - Возьми собаку для прогулок во время самоизоляции`,
+  },
   plugins: [
+    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-transformer-json`,
     {

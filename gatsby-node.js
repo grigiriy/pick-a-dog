@@ -11,7 +11,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           name
           main
           about
-          geo
           link
           secondary
           image
