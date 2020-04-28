@@ -7,15 +7,25 @@ import YMap from '../YMap';
 
 const cw =
   typeof window === 'undefined' || !window.document ? 0 : window.innerWidth;
+
 class IndexContainer extends Component {
   state = {
     map: false,
-    mobile: cw < 992 ? true : false,
+    mobile: false,
+    // mobile: cw < 992 ? true : false,
   };
 
   toggleTab = (e) => {
     this.setState({ map: !this.state.map });
   };
+
+  if_mobile = ($cw) => {
+    this.setState({ mobile: $cw < 992 ? true : false });
+  };
+
+  componentDidMount() {
+    this.if_mobile(cw);
+  }
 
   render() {
     let active_tab =
