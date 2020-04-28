@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 
 class DogInfo extends Component {
+  site_dog = () => {
+    window.ym(62302222, 'reachGoal', 'site_dog');
+    console.log('site_dog');
+  };
+
   render() {
     const { dog } = this.props;
     return (
@@ -18,10 +23,10 @@ class DogInfo extends Component {
             </p>
             {dog.about && <p>{dog.about}</p>}
             <a
+              onClick={this.site_dog}
               href={dog.link}
               target="_blank"
               type="button"
-              onClick="ym(62302222,'reachGoal','site_dog')"
               className="my-lg-1 mr-auto btn btn-warning"
             >
               Взять на прогулку{' '}

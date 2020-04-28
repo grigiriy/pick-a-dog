@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 
 class KennelInfo extends Component {
+  site_center = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'site_center');
+      console.log('site_center');
+    }
+  };
+  donate_me = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'donate_me');
+      console.log('donate_me');
+    }
+  };
+  donate_center = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'donate_center');
+      console.log('donate_center');
+    }
+  };
+
   render() {
     const { kennel } = this.props;
     return (
@@ -13,10 +32,10 @@ class KennelInfo extends Component {
             </div>
             <div className="col-lg-4">
               <a
+                onClick={this.site_center}
                 href={kennel.url}
                 type="button"
                 target="_blank"
-                onClick="ym(62302222,'reachGoal','site_center')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="на сайт приюта">
@@ -25,10 +44,10 @@ class KennelInfo extends Component {
                 На сайт приюта
               </a>
               <a
+                onClick={this.donate_center}
                 href={kennel.donate}
                 target="_blank"
                 type="button"
-                onClick="ym(62302222,'reachGoal','donate_center')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="помочь приюту">
@@ -37,11 +56,11 @@ class KennelInfo extends Component {
                 Помочь приюту
               </a>
               <a
+                onClick={this.donate_me}
                 href={this.props.donate}
                 target="_blank"
                 rel="noopener noreferrer"
                 type="button"
-                onClick="ym(62302222,'reachGoal','donate_me')"
                 className="my-1 mx-lg-0 mx-1 btn btn-warning"
               >
                 <span role="img" aria-label="поддержать pick-a-dog">
@@ -74,10 +93,10 @@ class KennelInfo extends Component {
         <div className="bg-light py-5 text-center">
           <div className="d-sm-flex col-lg-8 mx-auto justify-content-center">
             <a
+              onClick={this.site_center}
               href={kennel.url}
               type="button"
               target="_blank"
-              onClick="ym(62302222,'reachGoal','site_center')"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
               <span role="img" aria-label="на сайт приюта">
@@ -86,11 +105,11 @@ class KennelInfo extends Component {
               На сайт приюта
             </a>
             <a
+              onClick={this.donate_center}
               href={kennel.donate}
               type="button"
               target="_blank"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
-              onClick="ym(62302222,'reachGoal','donate_center')"
             >
               <span role="img" aria-label="помочь приюту">
                 💸
@@ -98,11 +117,11 @@ class KennelInfo extends Component {
               Помочь приюту
             </a>
             <a
+              onClick={this.donate_me}
               href={this.props.donate}
               target="_blank"
               rel="noopener noreferrer"
               type="button"
-              onClick="ym(62302222,'reachGoal','donate_me')"
               className="mx-lg-3 mx-1 my-1 my-md-0 btn btn-warning"
             >
               <span role="img" aria-label="поддержать pick-a-dog">

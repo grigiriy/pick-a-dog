@@ -13,6 +13,19 @@ class Header extends Component {
     });
   };
 
+  donate_me = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'donate_me');
+      console.log('donate_me');
+    }
+  };
+  connect_me = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'connect_me');
+      console.log('connect_me');
+    }
+  };
+
   render() {
     let { content } = this.props;
     let is_open = this.state.open ? 'active' : '';
@@ -37,12 +50,12 @@ class Header extends Component {
           </ul>
           <p>{content.text}</p>
           <a
+            onClick={this.donate_me}
             href={content.donate}
             target="_blank"
             rel="noopener noreferrer"
             type="button"
             className="mt-auto mx-lg-0 mx-1 btn btn-warning"
-            onClick="ym(62302222,'reachGoal','donate_me')"
           >
             <span role="img" aria-label="поддержать pick-a-dog">
               🍫
@@ -51,7 +64,12 @@ class Header extends Component {
           </a>
           <p className="mt-3 text-center">
             {content.credintails}{' '}
-            <a target="_blank" className="text-warning" href={content.link}>
+            <a
+              target="_blank"
+              className="text-warning"
+              onClick={this.connect_me}
+              href={content.link}
+            >
               {content.author}
             </a>
           </p>

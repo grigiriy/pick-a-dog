@@ -11,6 +11,19 @@ const navQuery = graphql`
 `;
 
 class IndexPage extends Component {
+  donate_me = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'donate_me');
+      console.log('donate_me');
+    }
+  };
+  connect_me = () => {
+    if (window.ym) {
+      window.ym(62302222, 'reachGoal', 'connect_me');
+      console.log('connect_me');
+    }
+  };
+
   render() {
     return (
       <Layout>
@@ -51,10 +64,7 @@ class IndexPage extends Component {
                   📱
                 </span>{' '}
                 Telegram{' '}
-                <a
-                  href="https://t.me/gmalyshev"
-                  onClick="ym(62302222,'reachGoal','connect_me')"
-                >
+                <a onClick={this.connect_me} href="https://t.me/gmalyshev">
                   @gmalyshev
                 </a>
               </p>
@@ -64,8 +74,8 @@ class IndexPage extends Component {
                 </span>{' '}
                 e-mail{' '}
                 <a
+                  onClick={this.connect_me}
                   href="mailto:grigiriy.malyshev@gmail.com"
-                  onClick="ym(62302222,'reachGoal','connect_me')"
                 >
                   grigiriy.malyshev@gmail.com
                 </a>
@@ -76,11 +86,11 @@ class IndexPage extends Component {
                   render={(data) => {
                     return (
                       <a
+                        onClick={this.donate_me}
                         href={data.kennelsJson.donate}
                         target="_blank"
                         rel="noopener noreferrer"
                         type="button"
-                        onClick="ym(62302222,'reachGoal','donate_me')"
                         className="mt-auto mx-lg-0 btn btn-warning"
                       >
                         <span role="img" aria-label="поддержать pick-a-dog">
