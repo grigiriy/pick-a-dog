@@ -66,11 +66,11 @@ class Layout extends Component {
             },
             {
               property: 'og:image',
-              content: `${require('../../images/favicon.png')}`,
+              content: `${require('../../images/og.jpg')}`,
             },
             {
               property: 'og:image:url',
-              content: `${require('../../images/favicon.png')}`,
+              content: `${require('../../images/og.jpg')}`,
             },
             {
               property: 'og:image:width',
